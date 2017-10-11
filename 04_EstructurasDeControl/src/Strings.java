@@ -27,6 +27,28 @@ public class Strings {
 		
 		System.out.println("\n" + cadena.indexOf("a"));
 		
-	}
+		System.out.println(cadena.toLowerCase());
+		System.out.println(cadena.toUpperCase());
+		System.out.println(cadena);
+		
+		int comparacion = (cadena1.compareTo("cadena2"));
+		
+		System.out.println("Comparacion de " + cadena1 + " con " + cadena2 + " es " + 
+				 comparacion);
+		
+		if(cadena2.equals(cadena1)){
+			System.out.println("son iguales");
+		}
+			
+		if(cadena2.compareTo(cadena1) == 0){
+			System.out.println("son iguales");
+		}
+		
+		System.out.println("La ultima aparicion de o en " + cadena + " es " + cadena.lastIndexOf("o"));
+		
+		System.out.println("La primera aparicion de o en " + cadena + " es " + cadena.indexOf("0"));
+		
+
+	} //TERMINA CODIGO
 
 }
