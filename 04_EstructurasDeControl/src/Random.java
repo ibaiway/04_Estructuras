@@ -34,7 +34,7 @@ public class Random {
 			}
 		} /* Cierra while*/
 		System.out.println("BIEN!!! Has acertado, era el numero:"+entero);
-		if(intento=1){
+		if(intento==1){
 			System.out.println("Lo has hecho en "+intento+" intento");
 		}else{
 		System.out.println("Lo has hecho en "+intento+" intentos");
