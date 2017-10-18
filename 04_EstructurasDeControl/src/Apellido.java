@@ -24,12 +24,28 @@ public class Apellido {
 		String  apellido1, apellido2, apellido3, apellido4, apellido5;
 		
 		switch (opcion){
-			case 1:
+			case A_LARGO:
 				System.out.println("Introduzca primer apellido:");
 				apellido1 = scan.nextLine();
 				System.out.println("Introduzca segundo apellido:");
 				apellido2 = scan.nextLine();
 				
+				if (apellido1.length() > apellido2.length()) {
+					System.out.println(apellido1 + " es mas largo que " + apellido2);
+					System.out.println("- " + apellido1 + " tiene " + apellido1.length() + " caracteres");
+					System.out.println("- " + apellido2 + " tiene " + apellido2.length() + " caracteres");	
+				}else if (apellido1.length() < apellido2.length()){
+					System.out.println(apellido2 + " es mas largo que " + apellido1);
+					System.out.println("- " + apellido1 + " tiene " + apellido1.length() + " caracteres");
+					System.out.println("- " + apellido2 + " tiene " + apellido2.length() + " caracteres");
+				}else{
+					System.out.println(apellido1 + " y " + apellido2 + " tienen la misma longitud.");
+					System.out.println("Su longitud es de " + apellido1.length() + " caracteres");
+				}
+				break;
+				
+				//METODO DE ABAJO ES PEOR
+				/*
 				if(apellido1.length() > apellido2.length()){
 					System.out.println(apellido1 + " es mas largo que " + apellido2);
 					System.out.println("- " + apellido1 + " tiene " + apellido1.length() + " caracteres");
@@ -44,8 +60,9 @@ public class Apellido {
 					System.out.println(apellido1 + " y " + apellido2 + " tienen la misma longitud.");
 					System.out.println("Su longitud es de " + apellido1.length() + " caracteres");
 				}
-				break;
-			case 2:
+				
+				*/
+			case A_ORDENADO:
 				System.out.println("Introduzca primer apellido:");
 				apellido3 = scan.nextLine();
 				System.out.println("Introduzca segundo apellido:");
@@ -58,10 +75,14 @@ public class Apellido {
 					System.out.println(apellido4 + " va antes que " + apellido3);
 				}
 				break;
-			case 3:
+			case A_EXTRAER:
 				System.out.println("Introduza nombre y apellido");
 				apellido5 = scan.nextLine();
-				System.out.println("Tu apellido es" + apellido5.substring(apellido5.lastIndexOf(" ")));
+				System.out.println("Tu apellido es " + apellido5.substring(apellido5.lastIndexOf(" ") + 1));
+				break;
+			case A_SALIR:
+				System.out.println("CERRANDO PROGRAMA");
+				System.out.println("#######################");
 				break;
 			default:
 				System.out.println("CERRANDO PROGRAMA");
