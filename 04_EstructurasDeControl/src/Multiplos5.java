@@ -5,8 +5,10 @@ public class Multiplos5 {
 		// TODO Auto-generated method stub
 		int i;
 		System.out.println("Estos son los multiplos de 5");
-		for(i = 0; i = 100 ; i++){
-			System.out.println(i);
+		for(i = 0; i < 100 ; i++){
+			if(i%5==0){
+				System.out.println(i);
+			}
 		}
 	}
 
