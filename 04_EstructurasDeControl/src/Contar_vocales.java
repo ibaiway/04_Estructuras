@@ -15,7 +15,6 @@ public class Contar_vocales {
 				vocal ++;
 			}
 		}
-				
 			
 			System.out.println("Hay " + vocal + " vocales");
 		

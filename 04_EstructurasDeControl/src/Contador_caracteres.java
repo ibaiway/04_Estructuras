@@ -10,14 +10,15 @@ public class Contador_caracteres {
 		String texto = scan.nextLine();
 		System.out.println("Introduce caracter a contar:");
 		String caracter = scan.nextLine();
-		//char caracteres = texto.charAt(0);
 		int veces = 0;
-		//char caracteres ; texto.toCharArray();
+		char caracteres = caracter.charAt(0);
 		
-		for (int i = texto.indexOf(caracter); i != -1;
-				i = texto.indexOf(caracter, i + caracter.length())){
-				veces ++;
-		}		
+		
+		for(int i = 0; i < texto.length(); i++ ){
+			if(texto.charAt(i) == caracteres){
+			veces++;	
+			}
+		} //TERMINA FOR
 	
 		
 		System.out.println("################");
